@@ -6,23 +6,27 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 11:52:41 by arecce            #+#    #+#             */
-/*   Updated: 2022/03/08 10:20:25 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/13 03:07:48 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdlib.h>
 int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
 	int	result;
+	int	counter;
 
 	i = 0;
 	sign = 1;
 	result = 0;
+	counter = 0;
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
 		|| str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
 		i++;
-	while (str[i] == '-' || str[i] == '+')
+	while ((str[i] == '-' || str[i] == '+') && counter++ == 0)
 	{
 		if (str[i] == '-')
 			sign *= -1;

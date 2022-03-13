@@ -6,21 +6,22 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:02:21 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/08 11:14:00 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/11 15:25:40 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-char *ft_strchr(char *str, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	int x;
+	char	*temp;
 
-	x = 0;
- while (str[x] != '\0')
- {
-  if (str[x] == c)
-		 return (&str[x]);
-   x++;
- }
-	return (0);
+	temp = (char *)s;
+	while (*temp != c)
+	{
+		if (*temp == '\0')
+			return (0);
+		temp++;
+	}
+	return (temp);
 }

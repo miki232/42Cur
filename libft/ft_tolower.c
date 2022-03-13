@@ -3,16 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mtoia <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:29:56 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/07 17:32:08 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/10 12:31:54 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_tolower(int ch)
 {
-	if (ch >= 'a' && ch <= 'z')
-		return (ch -= 32);
+	if (ch >= 'A' && ch <= 'Z')
+		return (ch += 32);
 	return (ch);
 }

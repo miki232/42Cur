@@ -6,25 +6,24 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:06:56 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/08 11:17:58 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/11 15:30:59 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str);
-
-char *ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int x;
+	char	*temp;
 
-	x = ft_strlen(str);
-	
-	while (*str)
+	temp = (char *)s + ft_strlen(s);
+	while (*temp != c)
 	{
-		if (str[x] == c)
-			return (&str[x]);
-		x--;
+		if (temp == s)
+		{
+			return (0);
+		}
+		temp--;
 	}
-	return (0);
+	return (temp);
 }

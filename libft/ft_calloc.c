@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 12:47:21 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/11 15:10:55 by mtoia            ###   ########.fr       */
+/*   Created: 2022/03/09 12:23:34 by mtoia             #+#    #+#             */
+/*   Updated: 2022/03/13 03:37:18 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int argument)
+void	*ft_calloc(unsigned int count, unsigned int size)
 {
-	if ((argument >= 'a' && argument <= 'z')
-		|| (argument >= 'A' && argument <= 'Z'))
-		return (1);
-	else if (argument >= '0' && argument <= '9')
-		return (1);
-	return (0);
+	void			*ptr;
+	unsigned int	ix;
+
+	ix = count * size;
+	if(!(ptr = (char *)malloc(ix)))
+		return (0);
+	ft_bzero(ptr, count);
+	return (ptr);
 }
