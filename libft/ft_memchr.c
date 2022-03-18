@@ -6,15 +6,15 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 10:19:10 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/11 15:19:18 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/17 23:36:28 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, unsigned int num)
+void	*ft_memchr(const void *s, int c, size_t num)
 {
-	unsigned int	x;
+	size_t			x;
 	unsigned char	*str;
 
 	str = (unsigned char *)s;

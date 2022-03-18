@@ -6,13 +6,13 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/09 10:45:05 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/12 18:32:57 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/17 23:36:43 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *ptr1, const void *ptr2, unsigned int num)
+int	ft_memcmp(const void *ptr1, const void *ptr2, size_t num)
 {
 	unsigned char	*s1;
 	unsigned char	*s2;

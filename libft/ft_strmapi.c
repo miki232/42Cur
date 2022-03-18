@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 17:16:11 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/17 11:48:35 by mtoia            ###   ########.fr       */
+/*   Created: 2022/03/17 18:18:50 by mtoia             #+#    #+#             */
+/*   Updated: 2022/03/17 23:43:48 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	count;
-	size_t	index;
+	int		ix;
+	char	*str;
 
-	count = 0;
-	index = 0;
-	while (src[count] != '\0')
-		count++;
-	if (size > 0)
+	ix = 0;
+	if (!s || !f)
+		return (0);
+	str = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (0);
+	while (*s)
 	{
-		while (src[index] != '\0' && index < (size - 1))
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
+		str[ix] = f(ix, *s);
+		ix++;
+		s++;
 	}
-	return (count);
+	str[ix] = 0;
+	return (str);
 }

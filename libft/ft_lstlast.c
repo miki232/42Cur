@@ -1,34 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/07 17:16:11 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/17 11:48:35 by mtoia            ###   ########.fr       */
+/*   Created: 2022/03/18 03:44:25 by mtoia             #+#    #+#             */
+/*   Updated: 2022/03/18 03:49:38 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+t_list *ft_lstlast(t_list *lst)
 {
-	size_t	count;
-	size_t	index;
-
-	count = 0;
-	index = 0;
-	while (src[count] != '\0')
-		count++;
-	if (size > 0)
-	{
-		while (src[index] != '\0' && index < (size - 1))
-		{
-			dest[index] = src[index];
-			index++;
-		}
-		dest[index] = '\0';
-	}
-	return (count);
+    while (lst)
+    {
+        if (!lst->next)
+            return (lst);
+        lst = lst->next;
+    }
+    return(lst);    
 }

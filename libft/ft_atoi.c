@@ -6,12 +6,13 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 11:52:41 by arecce            #+#    #+#             */
-/*   Updated: 2022/03/13 03:07:48 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/18 03:19:06 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
 int	ft_atoi(const char *str)
 {
 	int	i;

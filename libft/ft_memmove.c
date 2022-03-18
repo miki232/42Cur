@@ -6,16 +6,16 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 14:55:27 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/11 17:06:53 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/17 23:36:09 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *desti, const void *source, unsigned int num)
+void	*ft_memmove(void *desti, const void *source, size_t num)
 {
 	char			step;
-	unsigned int	index;
+	size_t			index;
 	unsigned char	*dest;
 	unsigned char	*src;
 
