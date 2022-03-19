@@ -1,0 +1,15 @@
+#include <stdio.h>
+int		main(void)
+{
+	int i = 0;
+	int	x = "----your function to count-----"("bonjour     je m'appel Arthur", ' ');
+	char **tab;
+		
+	tab = ft_split("bonjour je m'appel Arthur", ' ');
+	while (i < x)
+	{
+		printf("string %d : %s\n", i, tab[i]);
+		i++;
+	}
+	return (0);
+}
