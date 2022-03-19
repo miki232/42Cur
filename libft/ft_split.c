@@ -6,13 +6,14 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:36:46 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/18 04:57:00 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/19 10:15:22 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-static size_t	hwimt(const char *str, char spec)
+static size_t	parcount(const char *str, char spec)
 {
 	int		y;
 
@@ -40,7 +41,7 @@ char	**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	i = 0;
-	big = (char **)malloc((hwimt(s, c) + 1) * sizeof(char *));
+	big = (char **)malloc((parcount(s, c) + 1) * sizeof(char *));
 	if (!big)
 		return (NULL);
 	while (*s)
@@ -48,10 +49,9 @@ char	**ft_split(char const *s, char c)
 		if (*s != c)
 		{
 			len = 0;
-			while (*s && *s != c && ++len)
+			while (*s != c && *s && ++len)
 				++s;
-			big[i++] = 
-			(s - len, 0, len);
+			big[i++] = ft_substr(s - len, 0, len);
 		}
 		else
 			++s;
@@ -59,10 +59,3 @@ char	**ft_split(char const *s, char c)
 	big[i] = 0;
 	return (big);
 }
-
-// #include <stdio.h>
-// int	main()
-// {
-// 	ft_split("ciao come stai c c c c", ' ');
-
-// }

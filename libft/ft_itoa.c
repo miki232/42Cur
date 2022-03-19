@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 01:25:33 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/18 05:18:32 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/19 10:34:04 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,16 +59,3 @@ char	*ft_itoa(int num)
 	}
 	return (master);
 }
-
-// #include <stdio.h>
-// int	main()
-// {
-// 	int size;
-// 	char *i1;
-
-// 	i1 = ft_itoa(0);
-// 	//size = get_last_malloc_size();
-// 	if (size == 2)
-// 		return (printf("TEST_SUCCESS"));
-// 	printf("TEST_KO");
-// }
