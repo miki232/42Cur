@@ -6,7 +6,7 @@
 #    By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/09 12:28:21 by mtoia             #+#    #+#              #
-#    Updated: 2022/03/19 17:46:13 by mtoia            ###   ########.fr        #
+#    Updated: 2022/03/20 11:45:32 by mtoia            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS			=	ft_atoi.c ft_bzero.c ft_isalnum.c ft_isprint.c ft_memcmp.c \
 					
 OBJS			= $(SRCS:.c=.o)
 
-BONUS			=	 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c
+BONUS			=	 ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
+					ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstclear.c
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 

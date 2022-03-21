@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 01:25:33 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/19 10:34:04 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/21 17:00:18 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,28 +34,28 @@ int	halo(long nb)
 
 char	*ft_itoa(int num)
 {
-	char	*master;
+	char	*str;
 	long	n;
-	int		chief;
+	int		cfr;
 
 	n = num;
-	chief = halo(n);
-	master = ft_calloc(chief + 1, sizeof(char));
-	if (!master)
+	cfr = halo(n);
+	str = ft_calloc(cfr + 1, sizeof(char));
+	if (!str)
 		return (NULL);
-	master[chief--] = '\0';
+	str[cfr--] = '\0';
 	if (n == 0)
-		master[0] = 48;
+		str[0] = 48;
 	if (n < 0)
 	{
-		master[0] = '-';
+		str[0] = '-';
 		n *= -1;
 	}
 	while (n > 0)
 	{
-		master[chief] = 48 + (n % 10);
+		str[cfr] = 48 + (n % 10);
 		n = n / 10;
-		chief--;
+		cfr--;
 	}
-	return (master);
+	return (str);
 }

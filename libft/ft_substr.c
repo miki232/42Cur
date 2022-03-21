@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 15:48:10 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/18 00:41:01 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/20 18:29:13 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_substr(char const *s, size_t start, size_t len)
 
 	if (!s)
 		return (NULL);
-	str = (char *)malloc(sizeof(*s) * (len + 1));
-	if (!str)
-		return (NULL);
 	if ((int) start >= ft_strlen(s))
 		return (ft_strdup(""));
 	if ((int)len > ft_strlen(s))
 		len = ft_strlen(s);
+	str = (char *)malloc(sizeof(*s) * (len + 1));
+	if (!str)
+		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
