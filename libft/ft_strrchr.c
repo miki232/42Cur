@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 18:06:56 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/11 15:30:59 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/22 11:53:58 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	*temp;
+	int				i;
+	unsigned char	udc;
 
-	temp = (char *)s + ft_strlen(s);
-	while (*temp != c)
+	udc = c;
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (temp == s)
-		{
-			return (0);
-		}
-		temp--;
+		if (s[i] == udc)
+			return ((char *)s + i);
+		i--;
 	}
-	return (temp);
+	return (0);
 }

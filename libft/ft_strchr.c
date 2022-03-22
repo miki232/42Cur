@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:02:21 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/11 15:25:40 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/22 10:59:10 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,22 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*temp;
+	unsigned char	temp;
 
-	temp = (char *)s;
-	while (*temp != c)
+	temp = c;
+	while (*s != '\0')
 	{
-		if (*temp == '\0')
-			return (0);
-		temp++;
+		if (*s == temp)
+			return ((char *)s);
+		s++;
 	}
-	return (temp);
+	if (*s == temp)
+		return ((char *)s);
+	return (0);
 }
+// #include <stdio.h>
+// int	main()
+// {
+// 	char x[] = "sciao bela tu fumi canela";
+// 	printf("%s", ft_strchr(x, 'u'));
+// }
