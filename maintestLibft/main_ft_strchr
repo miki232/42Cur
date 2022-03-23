@@ -1,0 +1,12 @@
+#include <stdio.h>
+int	main()
+{
+	char x[] = "sciao bela tu fumi canela\nsuca\n";
+	int a = 1;
+	printf("%s\n\n", x);
+	while(!ft_strchr(x, '\n') && a != 0)
+	{
+		printf("ok");
+		a--;
+	}
+}
