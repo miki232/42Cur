@@ -1,0 +1,7 @@
+#include <stdio.h>
+int		main()
+{
+	char x[] = "lorem ipsum dolor sit amlletlll";
+	printf("%s", ft_strtrim(x, "tel"));
+	
+}
