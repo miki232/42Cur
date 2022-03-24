@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:23:06 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 09:37:16 by mtoia            ###   ########.fr       */
+/*   Created: 2022/03/09 12:23:34 by mtoia             #+#    #+#             */
+/*   Updated: 2022/03/24 09:45:57 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/ft_printf.h"
+#include "libft/libft.h"
 
-void	pritn(char c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	write (1, &c, 1);
-}
+	void	*ptr;
+	size_t	ix;
 
-int	ft_putstr(char *str)
-{
-	int	count;
-
-	count = 0;
-	if (!str)
-		str = "(null)";
-	while (str[count] != '\0')
-	{
-		pritn(str[count]);
-		count++;
-	}
-	return (count);
+	ix = count * size;
+	ptr = (char *)malloc(ix);
+	if (!ptr)
+		return (0);
+	ft_bzero(ptr, ix);
+	return (ptr);
 }

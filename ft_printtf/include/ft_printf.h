@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 21:21:07 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 04:14:28 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/24 10:45:59 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	ft_bzero(void *dst, int n);
 void			*ft_memset(void *str, int c, int n);
 void	ft_putchar_fd(char c, int fd);
 int	ft_percent();
-
+int	ft_ptr(unsigned long long ptr);
+void	*ft_memcpy(void *dest, const void *source, size_t num);
 
 #endif

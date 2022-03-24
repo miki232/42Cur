@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 18:49:13 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 05:07:51 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/24 11:08:44 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,29 +18,47 @@ int	ft_percent()
 	return (1);
 }
 
-int	ft_format(va_list args, const char format)
+int	ft_type(va_list args, const char type)
 {
 	int	ret_prit;
 
 	ret_prit = 0;
-	if (format == 'c')
+	if (type == 'c')
 		ret_prit += ft_putchar(va_arg(args, int));
-	else if (format == 's')
+	else if (type == 's')
+	{
+		// if (!va_arg(args, int))
+		// {
+		// 	ft_putstr("(null)");/////    no
+		// 	return (6);
+		// }
 		ret_prit += ft_putstr(va_arg(args, char*));
-	else if (format == 'p')
-		write(1, "no", 2);
-	else if (format == 'd')
+	}
+	else if (type == 'p')
+		ret_prit += ft_ptr(va_arg(args, unsigned long long)) ;
+	else if (type == 'd')
 		ret_prit += ft_printnbr(va_arg(args, int));
-	else if (format == 'u')
+	else if (type == 'i')
+		ret_prit += ft_printnbr(va_arg(args, int));
+	else if (type == 'u')
 		ret_prit += ft_print_unsigned(va_arg(args, int));
-	else if (format == 'x' || format == 'X')
-		ret_prit += ft_print_hex(va_arg(args, unsigned int), format);
-	else if (format == '%')
+	else if (type == 'x' || type == 'X')
+		ret_prit += ft_print_hex(va_arg(args, unsigned int), type);
+	else if (type == '%')
 		ret_prit += ft_percent();	
 	return (ret_prit);
 
 }
-
+// int		check_width(char *str, int width)
+// {
+// 	int ret_print;
+// 	char *temp;
+	//////////////////////////////////////////////// BONUS OPROSDSapopjj
+// 	temp = str;
+// 	ret_print = 0;
+// 	ft_memcpy(temp, str, width);
+// 	return (1);
+// }
 int ft_printf(const char *str, ...)
  {
 	int	flg;
@@ -54,7 +72,8 @@ int ft_printf(const char *str, ...)
 	{
 		if (str[flg] == '%')
 		{
-			ret_prit += ft_format(arg, str[flg + 1]);
+			//////check_width(va_arg(arg, char*), str[flg + 1]); ///////////// BONUS SUCA DIOPORCO
+			ret_prit += ft_type(arg, str[flg + 1]);
 			flg++;
 		}
 		else
@@ -64,3 +83,12 @@ int ft_printf(const char *str, ...)
 	 va_end(arg);
 	 return (ret_prit);
  }
+ 
+// int	main()
+// {
+// 	char *null = NULL;
+// 	ft_printf("%d", ft_printf("%s", null));
+// 	printf("\n");
+// 	printf("%d", printf("%s", null));
+// 	//ft_printf("%s\nsuca%s", "Mpare", "ciao");
+// }

@@ -1,62 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/13 01:25:33 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 09:45:09 by mtoia            ###   ########.fr       */
+/*   Created: 2022/03/07 16:43:50 by mtoia             #+#    #+#             */
+/*   Updated: 2022/03/24 09:48:18 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/ft_printf.h"
 #include "libft/libft.h"
 
-int	halo(long nb)
+void	*ft_memset(void *str, int c, int n)
 {
-	int	len;
-	int	mod;
+	int				x;
+	unsigned char	*ptr;
 
-	len = 1;
-	mod = 1;
-	if (nb < 0)
+	ptr = (unsigned char *)str;
+	x = 0;
+	while (x < n)
 	{
-		nb *= -1;
-		len++;
-	}
-	while (nb / mod > 9)
-	{
-		mod *= 10;
-		len++;
-	}
-	return (len);
-}
-
-char	*ft_itoa(int num)
-{
-	char	*str;
-	long	n;
-	int		cfr;
-
-	n = num;
-	cfr = halo(n);
-	str = ft_calloc(cfr + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	str[cfr--] = '\0';
-	if (n == 0)
-		str[0] = 48;
-	if (n < 0)
-	{
-		str[0] = '-';
-		n *= -1;
-	}
-	while (n > 0)
-	{
-		str[cfr] = 48 + (n % 10);
-		n = n / 10;
-		cfr--;
+		ptr[x++] = (unsigned char)c;
 	}
 	return (str);
 }

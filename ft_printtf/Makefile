@@ -6,7 +6,7 @@
 #    By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/09 12:28:21 by mtoia             #+#    #+#              #
-#    Updated: 2022/03/24 04:06:58 by mtoia            ###   ########.fr        #
+#    Updated: 2022/03/24 09:48:06 by mtoia            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,10 @@ SRCS			=	ft_printf.c \
 					utils/ft_putstr.c \
 					utils/ft_uprint.c \
 					utils/ft_itoa.c \
-					utils/ft_putchar_fd.c
+					utils/ft_putchar_fd.c \
+					utils/ft_ptr.c \
+					utils/ft_calloc.c \
+					utils/ft_bzero.c utils/ft_memset.c
 					
 					
 OBJS			= $(SRCS:.c=.o)
