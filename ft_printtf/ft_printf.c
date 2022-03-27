@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 18:49:13 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 11:08:44 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/27 11:07:10 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,7 @@ int	ft_type(va_list args, const char type)
 	if (type == 'c')
 		ret_prit += ft_putchar(va_arg(args, int));
 	else if (type == 's')
-	{
-		// if (!va_arg(args, int))
-		// {
-		// 	ft_putstr("(null)");/////    no
-		// 	return (6);
-		// }
 		ret_prit += ft_putstr(va_arg(args, char*));
-	}
 	else if (type == 'p')
 		ret_prit += ft_ptr(va_arg(args, unsigned long long)) ;
 	else if (type == 'd')
@@ -72,6 +65,14 @@ int ft_printf(const char *str, ...)
 	{
 		if (str[flg] == '%')
 		{
+			if (str[flg + 1] == '#')                ////
+			{                                       //////
+				flg++;                                ////////// Bonus
+				if (str[2] == 'X')                 ///////Quando si verifica ft_printf("%#x", ...)
+					ret_prit += write(1, "0X", 2);    ////deve restiture 0x....
+				if (str[2] == 'x')                 ///
+					ret_prit += write(1, "0x", 2);  //
+			}			                           //
 			//////check_width(va_arg(arg, char*), str[flg + 1]); ///////////// BONUS SUCA DIOPORCO
 			ret_prit += ft_type(arg, str[flg + 1]);
 			flg++;

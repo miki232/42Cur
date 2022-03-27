@@ -5,6 +5,8 @@ int	main()
 	// char *null = NULL;
 	// ft_printf("%d", ft_printf("%d", null));
 	// printf("\n");
-	//printf("%.s", "-42");
-	ft_printf("%3X", 54);
+	//printf("%#x", 424242);
+	ft_printf("%#x\n", 424242);
+	ft_printf("%#X", 424242);
+
 }
