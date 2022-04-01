@@ -6,12 +6,11 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 09:54:48 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 10:45:30 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/30 10:54:13 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
-#include "libft/libft.h"
+#include "ft_printf.h"
 
 void	*ft_memcpy(void *dest, const void *source, size_t num)
 {

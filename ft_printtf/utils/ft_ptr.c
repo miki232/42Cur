@@ -6,11 +6,11 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 09:03:54 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 09:17:35 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/30 11:06:46 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_hexptrlen(uintptr_t num)
 {
@@ -35,13 +35,13 @@ void	ft_ptr_hex(uintptr_t num)
 	else
 	{
 		if (num <= 9)
-			ft_putchar_fd((num + '0'), 1);
+			ft_putchar(num + '0');
 		else
 		{
 			if (num <= 9)
-				ft_putchar_fd((num + '0'), 1);
+				ft_putchar(num + '0');
 			else
-				ft_putchar_fd((num - 10 + 'a'), 1);
+				ft_putchar(num - 10 + 'a');
 		}
 	}
 }

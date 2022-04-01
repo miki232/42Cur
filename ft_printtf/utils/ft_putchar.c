@@ -6,14 +6,14 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 23:44:05 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/24 03:18:28 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/30 11:06:37 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "ft_printf.h"
 
-int    ft_putchar(char c)
+int	ft_putchar(char c)
 {
-    write (1, &c, 1);
+	write (1, &c, 1);
 	return (1);
 }
