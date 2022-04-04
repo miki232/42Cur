@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/29 10:28:43 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/04 11:27:59 by mtoia            ###   ########.fr       */
+/*   Created: 2022/04/04 11:30:36 by mtoia             #+#    #+#             */
+/*   Updated: 2022/04/04 11:30:37 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 // # ifndef BUFFER_SIZE
 // #  define BUFFER_SIZE 10
