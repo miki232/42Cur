@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:02:21 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/22 10:59:10 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/23 10:19:44 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)s);
 	return (0);
 }
-// #include <stdio.h>
-// int	main()
-// {
-// 	char x[] = "sciao bela tu fumi canela";
-// 	printf("%s", ft_strchr(x, 'u'));
-// }

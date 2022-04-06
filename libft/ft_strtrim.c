@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:57:03 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/22 17:54:40 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/27 10:33:53 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	}
 	str[insd] = 0;
 	return (str);
-}
-#include <stdio.h>
-int		main()
-{
-	char x[] = "lorem ipsum dolor sit amlletlll";
-	printf("%s", ft_strtrim(x, "tel"));
-	
 }

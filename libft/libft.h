@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 09:40:43 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/22 10:36:39 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/04 19:33:25 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ void			*ft_memchr(const void *s, int c, size_t num);
 int				ft_memcmp(const void *ptr1, const void *ptr2, size_t num);
 void			*ft_memcpy(void *dest, const void *source, size_t num);
 void			*ft_memmove(void *desti, const void *source, size_t num);
-char			*ft_strdup(char *src);
+char			*ft_strdup(const char *src);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 int				ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *big, const char *lie, size_t len);
 int				ft_tolower(int ch);
 int				ft_toupper(int ch);
-char			*ft_substr(char const *s, size_t start, size_t len);
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			**ft_split(char const *s, char c);

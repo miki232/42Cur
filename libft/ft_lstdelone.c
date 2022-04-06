@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/19 12:30:14 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/21 17:12:25 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/24 02:16:40 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
 	if (!lst || !del)
 		return ;
-	del(lst->content);
+	(*del)(lst->content);
 	free(lst);
 }

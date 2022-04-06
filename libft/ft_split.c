@@ -6,12 +6,11 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:36:46 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/21 15:43:44 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/03/30 11:14:31 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	parcount(const char *str, char spec)
 {
