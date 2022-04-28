@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 09:40:43 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/04 19:33:25 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/06 17:36:52 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int				ft_isascii(int c);
 int				ft_isdigit(int x);
 int				ft_isprint(int arg);
 size_t			ft_strlcpy(char *dest, const char *src, size_t size);
-int				ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 char			*ft_strrchr(const char *s, int c);
 int				ft_tolower(int ch);
 int				ft_toupper(int ch);
@@ -43,7 +43,6 @@ void			*ft_memcpy(void *dest, const void *source, size_t num);
 void			*ft_memmove(void *desti, const void *source, size_t num);
 char			*ft_strdup(const char *src);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
-int				ft_strlen(const char *str);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strnstr(const char *big, const char *lie, size_t len);
 int				ft_tolower(int ch);

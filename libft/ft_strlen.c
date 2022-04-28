@@ -6,13 +6,13 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 16:38:29 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/08 10:33:35 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/06 17:34:50 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	count;
 
