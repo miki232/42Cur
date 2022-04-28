@@ -6,13 +6,13 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 09:03:54 by mtoia             #+#    #+#             */
-/*   Updated: 2022/03/30 11:06:46 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/07 15:15:19 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexptrlen(uintptr_t num)
+int	ft_hexptrlen(unsigned long long num)
 {
 	int	len;
 
@@ -25,7 +25,7 @@ int	ft_hexptrlen(uintptr_t num)
 	return (len);
 }
 
-void	ft_ptr_hex(uintptr_t num)
+void	ft_ptr_hex(unsigned long long num)
 {
 	if (num >= 16)
 	{

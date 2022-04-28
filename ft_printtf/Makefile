@@ -6,7 +6,7 @@
 #    By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/09 12:28:21 by mtoia             #+#    #+#              #
-#    Updated: 2022/03/30 10:57:14 by mtoia            ###   ########.fr        #
+#    Updated: 2022/04/07 15:13:49 by mtoia            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,4 +36,4 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean re bonus
+.PHONY:			all clean fclean re
