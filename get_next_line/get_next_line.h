@@ -6,16 +6,12 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 10:28:43 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/04 11:27:59 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/28 13:57:34 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-
-// # ifndef BUFFER_SIZE
-// #  define BUFFER_SIZE 10
-// # endif
 
 # include <unistd.h>
 # include <stdlib.h>

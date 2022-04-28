@@ -6,7 +6,7 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 11:28:00 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/04 11:26:49 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/28 13:59:45 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,17 @@ char	*ft_readnsave(int fd, char *saved)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*saved[OPEN_MAX];
+	static char	*saved;
 
 	if (fd < 0 || fd > OPEN_MAX || BUFFER_SIZE <= 0)
 		return (0);
-	if (!saved[fd])
-		saved[fd] = ft_strdup("");
-	saved[fd] = ft_readnsave(fd, saved[fd]);
-	if (!saved[fd])
+	if (!saved)
+		saved = ft_strdup("");
+	saved = ft_readnsave(fd, saved);
+	if (!saved)
 		return (0);
-	line = ft_substr(saved[fd], 0, ft_srch(saved[fd], '\n') + 1, 0);
-	saved[fd] = ft_substr(saved[fd], ft_srch(saved[fd], '\n') + 1,
-			ft_strlen(saved[fd]), 1);
+	line = ft_substr(saved, 0, ft_srch(saved, '\n') + 1, 0);
+	saved = ft_substr(saved, ft_srch(saved, '\n') + 1,
+			ft_strlen(saved), 1);
 	return (line);
 }
