@@ -6,11 +6,11 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 11:30:49 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/04 11:30:50 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/29 15:31:23 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	*ft_memcpy(void *dest, const void *source, size_t num)
 {

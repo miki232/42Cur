@@ -6,12 +6,16 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 11:30:36 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/28 14:07:53 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/29 15:29:15 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_BONUS_H
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
 
 # include <unistd.h>
 # include <stdlib.h>

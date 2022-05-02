@@ -6,11 +6,11 @@
 /*   By: mtoia <mtoia@student.42roma.it>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 11:30:43 by mtoia             #+#    #+#             */
-/*   Updated: 2022/04/04 11:30:44 by mtoia            ###   ########.fr       */
+/*   Updated: 2022/04/29 15:31:13 by mtoia            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 size_t	ft_strlen(const char *str)
 {
